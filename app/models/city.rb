@@ -3,6 +3,7 @@ class City
   include Mongoid::Timestamps
 
   field :name
+  field :pinyin
 
   belongs_to :province
 

@@ -3,6 +3,7 @@ class Province
   include Mongoid::Timestamps
 
   field :name
+  field :short_name #简称: 冀 赣
 
   has_many :cities
 
