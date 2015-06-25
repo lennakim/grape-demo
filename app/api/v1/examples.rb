@@ -17,6 +17,12 @@ module V1
 
         wrapper({status: 202})
       end
+
+      desc "触发 AuthorizationError"
+      post "/user" do
+        raise AuthorizationError
+      end
+
     end
   end
 end
