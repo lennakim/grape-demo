@@ -13,8 +13,8 @@ $ ->
 
   if $("#kalading-two-b").length > 0
     swaggerUi = new SwaggerUi
-      url: "/api/v1/doc"
-      dom_id: "swagger-ui-container"
+      url: "/api/v2/doc"
+      dom_id: "kalading-two-b"
       supportedSubmitMethods: ['get', 'post', 'put', 'delete']
       onComplete: (swaggerApi, swaggerUi)->
         $('pre code').each (i, e)-> hljs.highlightBlock e
