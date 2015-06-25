@@ -14,6 +14,8 @@ module V1
       header['Access-Control-Request-Method'] = '*'
     end
 
+    mount Examples
+
     add_swagger_documentation base_path: "/api", api_version: 'v1', mount_path: 'doc', markdown: GrapeSwagger::Markdown::KramdownAdapter
   end
 end
