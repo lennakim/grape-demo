@@ -15,6 +15,7 @@ module V1
     end
 
     mount Examples
+    mount Cities
 
     add_swagger_documentation base_path: "/api", api_version: 'v1', mount_path: 'doc', markdown: GrapeSwagger::Markdown::KramdownAdapter
   end
