@@ -42,6 +42,20 @@ module V1
 
         wrapper({page: page, per_page: per_page })
       end
+
+      desc "获取 header", {
+        headers: Headers.auth_headers
+      }
+      post "header" do
+        status 200
+
+        request = Grape::Request.new(env)
+        headers = request.headers
+        token = headers['X-Token'].to_s
+
+        wrapper({token: token})
+      end
+
     end
   end
 end
