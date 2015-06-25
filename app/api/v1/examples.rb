@@ -1,5 +1,7 @@
 module V1
   class Examples < Grape::API
+    helpers V1::SharedParams
+
     resources :examples do
       desc "get method"
       get "" do
@@ -23,6 +25,16 @@ module V1
         raise AuthorizationError
       end
 
+      desc "分页"
+      params do
+        use :paginate
+      end
+      get "/paginate" do
+        page = params[:page].to_i
+        per_page = params[:per_page].to_i
+
+        wrapper({page: page, per_page: per_page })
+      end
     end
   end
 end
