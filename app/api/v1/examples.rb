@@ -6,6 +6,11 @@ module V1
         {method: :get}
       end
 
+      desc "post method"
+      post "" do
+        {method: :post, extends: "post status 默认 201" }
+      end
+
     end
   end
 end
