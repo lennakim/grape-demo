@@ -10,7 +10,7 @@ module V1
       get "" do
         cities = paginate City.all
 
-        wrapper(cities)
+        present cities, with: V2::Entity::City
       end
 
       desc "创建城市"
