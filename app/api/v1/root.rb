@@ -2,6 +2,7 @@ require 'grape-swagger'
 
 module V1
   class Root < Grape::API
+    helpers V1::Helpers
 
     version 'v1'
     format :json
