@@ -3,8 +3,12 @@ module V1
     helpers V1::SharedParams
 
     resources :cities do
+      desc "分页"
+      params do
+        use :paginate
+      end
       get "" do
-        cities = City.all
+        cities = paginate City.all
 
         wrapper(cities)
       end
