@@ -25,7 +25,14 @@ module V1
         raise AuthorizationError
       end
 
-      desc "分页"
+      desc "分页", {
+        notes: <<-ZQW
+          ## MRAK
+          引入 SharedParams `helpers V1::SharedParams`
+          在 params 中是使用 paginate
+
+        ZQW
+      }
       params do
         use :paginate
       end
