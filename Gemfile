@@ -44,6 +44,7 @@ end
 gem 'mongoid'
 
 gem 'grape'
+gem 'grape-entity'
 gem 'grape-jbuilder'
 gem 'rack-cors'  #solve the CORS problem
 gem 'swagger-ui_rails'
