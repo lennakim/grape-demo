@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  mount Base => '/api' #api
+
   root "home#index"
 end
