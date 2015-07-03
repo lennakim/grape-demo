@@ -1,4 +1,4 @@
-module V1
+module V2
   class Provinces < Grape::API
     helpers V1::SharedParams
 

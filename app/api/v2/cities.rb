@@ -1,4 +1,4 @@
-module V1
+module V2
   class Cities < Grape::API
     helpers V1::SharedParams
 
@@ -21,8 +21,6 @@ module V1
         end
       end
       post "" do
-        status 200
-
         permitted_params = ActionController::Parameters.new(params).require(:city).permit!
 
         result = City.new(permitted_params).save
